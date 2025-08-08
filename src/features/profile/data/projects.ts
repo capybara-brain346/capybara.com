@@ -50,7 +50,7 @@ This project is proudly supported by:
       "Component Registry",
       "Vercel",
     ],
-    description: `A minimal portfolio, component registry, and blog.
+    description: `A minimal portfolio, component registry.
 - Clean & modern design
 - Light & Dark theme support
 - vCard integration

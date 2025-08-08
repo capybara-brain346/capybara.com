@@ -3,7 +3,6 @@ import { USER } from "@/data/user";
 import { cn } from "@/lib/utils";
 import { FlipSentences } from "@/registry/flip-sentences";
 
-import { PronounceMyName } from "./pronounce-my-name";
 import { VerifiedIcon } from "./verified-icon";
 
 export function ProfileHeader() {
@@ -20,17 +19,34 @@ export function ProfileHeader() {
           />
         </div>
 
-        {/* Flag of Viet Nam */}
+        {/* Flag of India */}
         <svg
           className="absolute top-0 -left-px h-8 sm:h-9"
-          viewBox="0 0 30 20"
+          viewBox="-45 -30 90 60"
           xmlns="http://www.w3.org/2000/svg"
+          fill="#07038D"
         >
-          <rect width="30" height="20" fill="#F00" />
-          <polygon
-            points="15,4 11.47,14.85 20.71,8.15 9.29,8.15 18.53,14.85"
-            fill="#FFEB00"
-          />
+          <path fill="#FFF" d="m-45-30h90v60h-90z" />
+          <path fill="#FF6820" d="m-45-30h90v20h-90z" />
+          <path fill="#046A38" d="m-45 10h90v20h-90z" />
+          <circle r="9.25" />
+          <circle fill="#FFF" r="8" />
+          <circle r="1.6" />
+          <g id="d">
+            <g id="c">
+              <g id="b">
+                <g id="a">
+                  <path d="m0-8 .3 4.81409L0-.80235-.3-3.18591z" />
+                  <circle transform="rotate(7.5)" r="0.35" cy="-8" />
+                </g>
+                <use xlinkHref="#a" transform="scale(-1)" />
+              </g>
+              <use xlinkHref="#b" transform="rotate(15)" />
+            </g>
+            <use xlinkHref="#c" transform="rotate(30)" />
+          </g>
+          <use xlinkHref="#d" transform="rotate(60)" />
+          <use xlinkHref="#d" transform="rotate(120)" />
         </svg>
       </div>
 
@@ -56,15 +72,6 @@ export function ProfileHeader() {
             <SimpleTooltip content="Verified">
               <VerifiedIcon className="size-[0.6em] translate-y-px text-info" />
             </SimpleTooltip>
-            {USER.namePronunciationUrl && (
-              <>
-                &nbsp;
-                <PronounceMyName
-                  className="translate-y-px"
-                  namePronunciationUrl={USER.namePronunciationUrl}
-                />
-              </>
-            )}
           </h1>
 
           <div className="h-12 border-t border-edge py-1 pl-4 sm:h-auto">
