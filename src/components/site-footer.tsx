@@ -1,5 +1,3 @@
-import { RssIcon } from "lucide-react";
-
 import { SITE_INFO, SOURCE_CODE_GITHUB_URL } from "@/config/site";
 import { cn } from "@/lib/utils";
 
@@ -51,32 +49,7 @@ export function SiteFooter() {
               llms.txt
             </a>
 
-            <Separator />
 
-            <a
-              className="flex items-center text-muted-foreground transition-colors hover:text-foreground"
-              href={`${SITE_INFO.url}/rss`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <RssIcon className="size-4" />
-              <span className="sr-only">RSS</span>
-            </a>
-
-            <Separator />
-
-            <a
-              className="flex text-muted-foreground transition-colors hover:text-foreground"
-              href={
-                process.env.NEXT_PUBLIC_DMCA_URL ||
-                "https://www.dmca.com/ProtectionPro.aspx"
-              }
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Icons.dmca className="h-5 w-auto" />
-              <span className="sr-only">DMCA.com Protection Status</span>
-            </a>
           </div>
         </div>
       </div>

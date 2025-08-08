@@ -18,7 +18,7 @@ export function SocialLinkItem({ icon, title, description, href }: SocialLink) {
     >
       <div className="relative size-12 shrink-0">
         <Image
-          className="rounded-xl"
+          className="rounded-xl bg-white"
           src={icon}
           alt={title}
           width={48}

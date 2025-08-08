@@ -5,7 +5,7 @@ import { AnimatePresence } from "motion/react";
 import * as motion from "motion/react-m";
 import React, { useCallback, useEffect, useState } from "react";
 
-import { ChanhDaiMark } from "@/components/chanhdai-mark";
+import { PiyushMark } from "@/components/chanhdai-mark";
 import { Button } from "@/components/ui/button";
 import { SimpleTooltip } from "@/components/ui/tooltip";
 import { AppleHelloVietnameseEffect } from "@/registry/apple-hello-effect";
@@ -63,7 +63,7 @@ export function Hello() {
               exit={{ opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.5 }}
             >
-              <ChanhDaiMark className="h-12 sm:h-16" />
+              <PiyushMark className="h-12 sm:h-16" />
             </motion.div>
           )}
         </div>

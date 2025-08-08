@@ -8,7 +8,6 @@ import { ToggleTheme } from "@/components/toggle-theme";
 import { MAIN_NAV } from "@/config/site";
 import { cn } from "@/lib/utils";
 
-import { SiteHeaderMark } from "./site-header-mark";
 import { SiteHeaderWrapper } from "./site-header-wrapper";
 
 const BrandContextMenu = dynamic(() =>
@@ -34,11 +33,6 @@ export function SiteHeader() {
         className="screen-line-before screen-line-after mx-auto flex h-12 items-center justify-between gap-2 border-x border-edge px-2 after:z-1 after:transition-[background-color] sm:gap-4 md:max-w-3xl"
         data-header-container
       >
-        <BrandContextMenu>
-          <Link href="/" aria-label="Home" className="[&_svg]:h-8">
-            <SiteHeaderMark />
-          </Link>
-        </BrandContextMenu>
 
         <div className="flex-1" />
 

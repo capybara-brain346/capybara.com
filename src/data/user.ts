@@ -1,11 +1,10 @@
 export const USER = {
   firstName: "Piyush",
   lastName: "Choudhari",
-  displayName: "Capybara",
+  displayName: "Piyush 👋",
   username: "capybara346",
   gender: "male",
   pronouns: "he/him",
-  bio: "Creating with code. Small details matter.",
   flipSentences: [
     "AI & Backend Engineer",
     "Artificial Intelligence Undergrad @DYPCOE",
@@ -15,13 +14,13 @@ export const USER = {
   email: "Y2hvdWRoYXJpLnBpeXVzaEBnbWFpbC5jb20=", // base64 encoded
   website: "https://chanhdai.com",
   jobTitle: "AI & Backend Engineer",
-  jobs: [
-    {
-      title: "AI Engineer Intern",
-      company: "Ronin Labs",
-      website: "https://www.linkedin.com/company/ronin-labs/",
-    },
-  ],
+  // jobs: [
+  //   {
+  //     title: "AI Engineer Intern",
+  //     company: "Ronin Labs",
+  //     website: "https://www.linkedin.com/company/ronin-labs/",
+  //   },
+  // ],
   about: `
   I’m an engineer who enjoys building systems that don’t just work—but scale, explain, and solve real-world problems. From developing AI-powered products to architecting backend infrastructures, I focus on creating solutions that balance complexity with clarity.
 
