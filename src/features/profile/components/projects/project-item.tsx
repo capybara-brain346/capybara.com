@@ -1,8 +1,10 @@
 import {
   ChevronsDownUpIcon,
   ChevronsUpDownIcon,
+  GithubIcon,
   InfinityIcon,
-  LinkIcon,
+  LinkedinIcon,
+  YoutubeIcon,
 } from "lucide-react";
 import Image from "next/image";
 import React from "react";
@@ -83,17 +85,47 @@ export function ProjectItem({
                 </dl>
               </div>
 
-              <SimpleTooltip content="Open Project Link">
-                <a
-                  className="relative flex size-6 shrink-0 items-center justify-center text-muted-foreground after:absolute after:-inset-2 hover:text-foreground"
-                  href={addQueryParams(project.link, UTM_PARAMS)}
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <LinkIcon className="pointer-events-none size-4" />
-                  <span className="sr-only">Open Project Link</span>
-                </a>
-              </SimpleTooltip>
+              <div className="flex gap-1">
+                {project.links?.github && (
+                  <SimpleTooltip content="GitHub">
+                    <a
+                      className="relative flex size-6 shrink-0 items-center justify-center text-muted-foreground after:absolute after:-inset-2 hover:text-foreground"
+                      href={addQueryParams(project.links.github, UTM_PARAMS)}
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      <GithubIcon className="pointer-events-none size-4" />
+                      <span className="sr-only">GitHub</span>
+                    </a>
+                  </SimpleTooltip>
+                )}
+                {project.links?.linkedin && (
+                  <SimpleTooltip content="LinkedIn">
+                    <a
+                      className="relative flex size-6 shrink-0 items-center justify-center text-muted-foreground after:absolute after:-inset-2 hover:text-foreground"
+                      href={addQueryParams(project.links.linkedin, UTM_PARAMS)}
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      <LinkedinIcon className="pointer-events-none size-4" />
+                      <span className="sr-only">LinkedIn</span>
+                    </a>
+                  </SimpleTooltip>
+                )}
+                {project.links?.youtube && (
+                  <SimpleTooltip content="YouTube">
+                    <a
+                      className="relative flex size-6 shrink-0 items-center justify-center text-muted-foreground after:absolute after:-inset-2 hover:text-foreground"
+                      href={addQueryParams(project.links.youtube, UTM_PARAMS)}
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      <YoutubeIcon className="pointer-events-none size-4" />
+                      <span className="sr-only">YouTube</span>
+                    </a>
+                  </SimpleTooltip>
+                )}
+              </div>
 
               <div
                 className="shrink-0 text-muted-foreground [&_svg]:size-4"

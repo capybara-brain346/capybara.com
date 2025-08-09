@@ -5,7 +5,11 @@ export type Project = {
     start: string;
     end?: string;
   };
-  link: string;
+  links?: {
+    github?: string;
+    linkedin?: string;
+    youtube?: string;
+  };
   skills: string[];
   description?: string;
   logo?: string;

@@ -1,6 +1,6 @@
 import { SITE_INFO } from "@/config/site";
 
-const content = `# chanhdai.com
+const content = `# piyush-choudhari.vercel.app
 
 > A minimal portfolio, component registry, and blog to showcase my work as a Design Engineer.
 

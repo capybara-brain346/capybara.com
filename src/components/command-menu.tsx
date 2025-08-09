@@ -32,7 +32,6 @@ import {
 } from "@/components/ui/command";
 import { SOCIAL_LINKS } from "@/features/profile/data/social-links";
 import { cn } from "@/lib/utils";
-import type { Post } from "@/types/blog";
 import { copyText } from "@/utils/copy";
 
 import { PiyushMark, getMarkSVG } from "./chanhdai-mark";

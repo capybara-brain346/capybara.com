@@ -3,12 +3,12 @@
   "name": "flip-sentences",
   "type": "registry:component",
   "title": "Flip Sentences",
-  "author": "ncdai <dai@chanhdai.com>",
+  "author": "Piyush Choudhari",
   "dependencies": [
     "motion"
   ],
   "registryDependencies": [
-    "https://chanhdai.com/r/utils.json"
+    "/r/utils.json"
   ],
   "files": [
     {

@@ -8,8 +8,8 @@ export function PiyushMark(props: PiyushMarkProps) {
     <Image
       src={initialsImage}
       alt="Piyush's initials"
-      width={512}
-      height={512}
+      width={1024}
+      height={1024}
       {...props}
     />
   );

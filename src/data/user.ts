@@ -12,7 +12,7 @@ export const USER = {
   address: "Pune, Maharastram, India",
   phoneNumber: "KzkxIDkxNjgwODg1NjU=", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
   email: "Y2hvdWRoYXJpLnBpeXVzaEBnbWFpbC5jb20=", // base64 encoded
-  website: "https://chanhdai.com",
+  website: "https://piyush-choudhari.vercel.app",
   jobTitle: "AI & Backend Engineer",
   // jobs: [
   //   {
@@ -29,8 +29,7 @@ Previously, I worked on AI projects where I helped turn experimental ideas into 
 I’m passionate about working in teams that value thoughtful problem-solving. If the work challenges me to think deeper and build smarter, I’m all in.
   `,
   avatar: "/images/profile-pic.png",
-  ogImage: "https://assets.chanhdai.com/images/screenshot-og-image-dark.png",
-  keywords:
-    "ncdai, nguyenchanhdai, nguyen chanh dai, chanhdai, chanh dai, iamncdai, quaric, zadark, nguyễn chánh đại, chánh đại",
+  ogImage: "/images/cover.png",
   dateCreated: "2025-8-08", // YYYY-MM-DD
+  bio: "I’m an engineer who enjoys building systems that don’t just work—but scale, explain, and solve real-world problems.",
 };
