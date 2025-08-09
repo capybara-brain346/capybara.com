@@ -1,6 +1,12 @@
 "use client";
 
 import { useCommandState } from "cmdk";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useTheme } from "next-themes";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
+import { toast } from "sonner";
+
 import type { LucideProps } from "lucide-react";
 import {
   BriefcaseBusinessIcon,
@@ -15,11 +21,9 @@ import {
   TriangleDashedIcon,
   TypeIcon,
 } from "lucide-react";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
-import { useTheme } from "next-themes";
-import React, { useCallback, useEffect, useMemo, useState } from "react";
-import { toast } from "sonner";
+import { SOCIAL_LINKS } from "@/features/profile/data/social-links";
+import { cn } from "@/lib/utils";
+import { copyText } from "@/utils/copy";
 
 import {
   CommandDialog,
@@ -30,11 +34,7 @@ import {
   CommandList,
   CommandSeparator,
 } from "@/components/ui/command";
-import { SOCIAL_LINKS } from "@/features/profile/data/social-links";
-import { cn } from "@/lib/utils";
-import { copyText } from "@/utils/copy";
-
-import { PiyushMark, getMarkSVG } from "./chanhdai-mark";
+import { getMarkSVG } from "./chanhdai-mark";
 import { getWordmarkSVG } from "./chanhdai-wordmark";
 import { Icons } from "./icons";
 import { Button } from "./ui/button";
@@ -54,7 +54,6 @@ const MENU_LINKS: CommandLinkItem[] = [
   {
     title: "Daifolio",
     href: "/",
-    icon: PiyushMark,
   },
   {
     title: "Blog",
@@ -113,7 +112,15 @@ const SOCIAL_LINK_ITEMS: CommandLinkItem[] = SOCIAL_LINKS.map((item) => ({
   openInNewTab: true,
 }));
 
-export function CommandMenu({ posts }: { posts: Post[] }) {
+type BlogPost = {
+  slug: string;
+  metadata?: {
+    category?: string;
+    title: string;
+  };
+};
+
+export function CommandMenu({ posts }: { posts: BlogPost[] }) {
   const router = useRouter();
 
   const { setTheme, resolvedTheme } = useTheme();
@@ -274,12 +281,12 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
             <CommandItem
               onSelect={() => {
                 handleCopyText(
-                  getMarkSVG(resolvedTheme === "light" ? "#000" : "#fff"),
+                  getMarkSVG(),
                   "Copied Mark as SVG"
                 );
               }}
             >
-              <PiyushMark />
+              <Icons.react />
               Copy Mark as SVG
             </CommandItem>
 
@@ -440,7 +447,7 @@ function CommandMenuFooter() {
       <div className="flex h-10" />
 
       <div className="absolute inset-x-0 bottom-0 flex h-10 items-center justify-between gap-2 border-t bg-zinc-100/30 px-4 text-xs font-medium dark:bg-zinc-800/30">
-        <PiyushMark className="size-6 text-muted-foreground" aria-hidden />
+        <Icons.react className="size-6 text-muted-foreground" aria-hidden />
 
         <div className="flex shrink-0 items-center gap-2">
           <span>{ENTER_ACTION_LABELS[selectedCommandKind]}</span>
@@ -471,11 +478,11 @@ function CommandMenuKbd({ className, ...props }: React.ComponentProps<"kbd">) {
   );
 }
 
-function postToCommandLinkItem(post: Post): CommandLinkItem {
+function postToCommandLinkItem(post: BlogPost): CommandLinkItem {
   const isComponent = post.metadata?.category === "components";
 
   return {
-    title: post.metadata.title,
+    title: post.metadata?.title ?? post.slug,
     href: isComponent ? `/components/${post.slug}` : `/blog/${post.slug}`,
     keywords: isComponent ? ["component"] : undefined,
   };

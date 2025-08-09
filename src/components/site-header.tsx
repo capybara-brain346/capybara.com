@@ -1,5 +1,4 @@
 import dynamic from "next/dynamic";
-import Link from "next/link";
 
 import { DesktopNav } from "@/components/desktop-nav";
 import { MobileNav } from "@/components/mobile-nav";
@@ -19,7 +18,6 @@ const CommandMenu = dynamic(() =>
 );
 
 export function SiteHeader() {
-
   return (
     <SiteHeaderWrapper
       className={cn(

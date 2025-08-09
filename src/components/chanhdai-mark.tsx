@@ -1,7 +1,8 @@
 import Image from "next/image";
+
 import initialsImage from "../../public/images/initials.png";
 
-export interface PiyushMarkProps extends Omit<React.ComponentProps<typeof Image>, "src" | "alt"> { }
+export type PiyushMarkProps = Omit<React.ComponentProps<typeof Image>, "src" | "alt">;
 
 export function PiyushMark(props: PiyushMarkProps) {
   return (

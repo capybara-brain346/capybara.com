@@ -1,8 +1,8 @@
 "use client";
 
 import { DownloadIcon, TriangleDashedIcon, TypeIcon } from "lucide-react";
-import Link from "next/link";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 import { toast } from "sonner";
 
 import { copyText } from "@/utils/copy";
@@ -26,7 +26,7 @@ export function BrandContextMenu({ children }: { children: React.ReactNode }) {
       <ContextMenuContent className="w-64">
         <ContextMenuItem
           onClick={() => {
-            const svg = getMarkSVG(resolvedTheme === "light" ? "#000" : "#fff");
+            const svg = getMarkSVG();
             copyText(svg);
             toast.success("Copied Mark as SVG");
           }}
