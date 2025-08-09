@@ -10,16 +10,7 @@ export function SiteFooter() {
         </p>
 
         <p className="mb-4 px-4 text-center font-mono text-sm text-balance text-muted-foreground">
-          Built by{" "}
-          <a
-            className="link"
-            href="https://x.com/iamncdai"
-            target="_blank"
-            rel="noopener"
-          >
-            ncdai
-          </a>
-          . The source code is available on{" "}
+          The source code is available on{" "}
           <a
             className="link"
             href={SOURCE_CODE_GITHUB_URL}
