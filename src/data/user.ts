@@ -9,7 +9,7 @@ export const USER = {
     "AI & Backend Engineer",
     "Artificial Intelligence Undergrad @DYPCOE",
   ],
-  address: "Pune, Maharastram, India",
+  address: "Pune, Maharastra, India",
   phoneNumber: "KzkxIDkxNjgwODg1NjU=", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
   email: "Y2hvdWRoYXJpLnBpeXVzaEBnbWFpbC5jb20=", // base64 encoded
   website: "https://piyush-choudhari.vercel.app",
