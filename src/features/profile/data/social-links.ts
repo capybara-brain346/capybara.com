@@ -27,8 +27,8 @@ export const SOCIAL_LINKS: SocialLink[] = [
   },
   {
     icon: "/images/document.png",
-    title: "Resume",
+    title: "Google Drive",
     description: "PDF",
-    href: "/resume/resume.pdf",
+    href: "https://drive.google.com/file/d/1ECeS6jEHUsEhKXKKLUCYg_OV8UbHH6wa/view?usp=sharing",
   },
 ];
