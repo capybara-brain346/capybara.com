@@ -66,16 +66,31 @@ export function ProfileHeader() {
         </div>
 
         <div className="border-t border-edge">
-          <h1 className="flex items-center pl-4 text-3xl font-semibold">
+          <h1 className="flex items-center pl-4 text-4xl sm:text-5xl font-bold py-2">
             {USER.displayName}
             &nbsp;
             <SimpleTooltip content="Verified">
-              <VerifiedIcon className="size-[0.6em] translate-y-px text-info" />
+              <VerifiedIcon className="size-[0.7em] translate-y-px text-info" />
             </SimpleTooltip>
           </h1>
 
-          <div className="h-12 border-t border-edge py-1 pl-4 sm:h-auto">
-            <FlipSentences sentences={USER.flipSentences} />
+          <div className="relative w-full overflow-hidden border-t border-edge">
+            <div className="relative mx-auto max-w-3xl">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/nyan-cat.gif"
+                alt="Nyan Cat animation"
+                className="w-full h-[120px] object-cover object-center sm:h-[160px]"
+              />
+            </div>
+          </div>
+
+          <div className="h-auto border-t border-edge py-3 pl-4">
+            <div className="text-xl sm:text-xl">
+              <i>
+                AI & Backend Engineer
+              </i>
+            </div>
           </div>
         </div>
       </div>
